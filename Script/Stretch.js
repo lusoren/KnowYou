@@ -40,7 +40,7 @@ $(document).ready(function(){
             }
             
             
-            if(width == offset) {
+            if(width == offset+50) {
             
                 i++;
  

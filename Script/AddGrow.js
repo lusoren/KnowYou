@@ -1,15 +1,12 @@
 $(document).ready(function(){
-    
-    
-$(".row").click(function(){
         
-    //row number as rowN
-    var row=$(this).attr('id');
+    $(".row").click(function(){
         
-    addNote(row);
+        //row number as rowN
+        var row=$(this).attr('id');
+        addNote(row);
                 
-});
-
+    });
 });
 
 var growId=0;
@@ -21,7 +18,6 @@ function addNote(row) {
         $(id).append("<div class=\"grow grow" + growId + "\"></div>");
         ass= row.replace("row","");
 
-        
         $('<script>')
             
             .attr('type', 'text/javascript')
@@ -36,23 +32,18 @@ function addNote(row) {
 
 //number of iterations in row
 var toggle = []
-for (i = 0; i < 21; i++) {
+for (i = 0; i < 16; i++) {
         toggle[i] =0;
 }
 
 //number of notes
 var click = []
-for (i = 0; i < 21; i++) {
+for (i = 0; i < 16; i++) {
         click[i] =0;
 }
 
 var totall= 0;
 var x= false;
-
-var img1 = "I.jpg";
-var img2 = "Would.jpg";
-
-var once=0;
 
 //return image background
 function getBackground(row, idTag, first) {
@@ -61,39 +52,40 @@ function getBackground(row, idTag, first) {
         click[row]=click[row]+1;
     }
     
-    var img1 = "I.jpg";
-var img2 = "Would.jpg";
+    var img1 = "I.png";
+    var img2 = "Would.png";
+
     if (toggle[row]>2) {
-        img1="Like.jpg";
+        img1="Like.png";
        
     }
     
     if (toggle[row]>4) {
-       img2="TO.jpg";
+       img2="To.png";
     }
     
     if (toggle[row]>6) {
-        img1="Get.jpg";
+        img1="Get.png";
        
     }
     
     if (toggle[row]>8) {
-        img2="To.jpg";
+        img2="To.png";
        
     }
     
     if (toggle[row]>10) {
-        img1="Know.jpg";
+        img1="Know.png";
        
     }
     
     if (toggle[row]>12) {
-        img2="You.jpg";
+        img2="You.png";
        
     }
     
     if (toggle[row]>14) {
-        img1="You.jpg";
+        img1="You.png";
        
     } 
     
@@ -117,12 +109,8 @@ var img2 = "Would.jpg";
         
         return;
     }
-    
 }
 
-function getPic(row) {
-    
-}
 var kiss=0;
 function reset() {
     for (a = 1; a < 21; a=a+1) {
@@ -139,8 +127,7 @@ function reset() {
 function destroy() {
 
     for (f = 1; f < 21; f++) {
-        $("#row" + f).html(" ");
-        
+        $("#row" + f).html(" ");  
     }
     
     img1 = "Half1.png";
@@ -152,7 +139,6 @@ function destroy() {
     //checkTrue(true);
     //$('head').html("");
     return;
-
 }
 
 var xd=true;
@@ -168,4 +154,3 @@ function checkTrue(switcher) {
         return false;
     }
 }
-

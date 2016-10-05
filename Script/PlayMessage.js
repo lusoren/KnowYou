@@ -1,5 +1,5 @@
 var togle = []
-for (i = 0; i < 21; i++) {
+for (i = 0; i < 16; i++) {
         togle[i] =0;
 }
 

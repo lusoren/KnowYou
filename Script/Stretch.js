@@ -32,7 +32,7 @@ $(document).ready(function(){
         
             if(!that.length) return dfd.reject();
             
-            if ((width/offset)==.5) {
+            if (Math.round(offset/2)==width) {
                 
                 playCool(args.row);
                 that.css("border-color","white");
@@ -72,11 +72,7 @@ $(document).ready(function(){
             setTimeout(go, args.speed);
         };
         
-        if(args.leftToRight) {
-  
-            
-              
-        }
+
         
         that.css(marqueeCss);
     
